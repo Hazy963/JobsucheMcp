@@ -42,7 +42,8 @@ JobsucheMcp uses the open Model Context Protocol (MCP), allowing different AI cl
 - Open GitHub Copilot and navigate to Customize.
 - In the top-right corner, click Add.
 - Select MCP Server
--<img width="2298" height="1223" alt="image" src="https://github.com/user-attachments/assets/c3374ea7-a13b-411d-bf0a-f98be4215203" />
+- <img width="702" height="602" alt="image" src="https://github.com/user-attachments/assets/0d11def1-45a5-4349-8246-63a11ec08f8f" />
+
 
 
 
