@@ -34,11 +34,16 @@ JobsucheMcp uses the open Model Context Protocol (MCP), allowing different AI cl
 - **Version information:** Check the application and API versions.
 
 ## Integration with Github Copilot 
-- Build your Release Folder or donwnload prebuilt one form releases :
+- Build your Release ```dotnet publish -c Release -o C:\Tools\JobsucheMcp``` Folder
+- or donwnload prebuilt one form releases :
 - https://github.com/Hazy963/JobsucheMcp/releases/tag/v1.0
 - Extract the ZIP file to a folder of your choice.
 - Point your MCP client to JobsucheMcp.exe:
-- <img width="2543" height="1376" alt="image" src="https://github.com/user-attachments/assets/9b9a6213-9971-4b8c-beae-ba575976903c" />
+- Open GitHub Copilot and navigate to Customize.
+- In the top-right corner, click Add.
+- Select MCP Server
+-<img width="2298" height="1223" alt="image" src="https://github.com/user-attachments/assets/c3374ea7-a13b-411d-bf0a-f98be4215203" />
+
 
 
 
