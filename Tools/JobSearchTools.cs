@@ -21,10 +21,10 @@ public class JobSearchTools
         Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
     };
 
-    private readonly JobsucheClient _client;
+    private readonly JobSearchClient _client;
     private readonly JobsucheSettings _settings;
 
-    public JobSearchTools(JobsucheClient client, IOptions<JobsucheSettings> options)
+    public JobSearchTools(JobSearchClient client, IOptions<JobsucheSettings> options)
     {
         _client = client;
         _settings = options.Value;

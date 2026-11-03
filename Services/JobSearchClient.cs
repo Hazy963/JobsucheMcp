@@ -7,13 +7,13 @@ using Microsoft.Extensions.Options;
 namespace JobsucheMcp.Services;
 
 /// <summary>Talks to the Arbeitsagentur API. Builds the address, sends the request, returns the answer.</summary>
-public class JobsucheClient
+public class JobSearchClient
 {
     private readonly HttpClient _httpClient;
     private readonly JobsucheSettings _settings;
     private readonly JobResponseParser _parser;
 
-    public JobsucheClient(HttpClient httpClient, IOptions<JobsucheSettings> options, JobResponseParser parser)
+    public JobSearchClient(HttpClient httpClient, IOptions<JobsucheSettings> options, JobResponseParser parser)
     {
         _httpClient = httpClient;
         _settings = options.Value;
@@ -83,8 +83,8 @@ public class JobsucheClient
         if (statusCode == HttpStatusCode.Forbidden)
         {
             message += "403 often means this ApiVersion ('" + _settings.ApiVersion + "') is retired or not allowed. "
-                + "Change Jobsuche:ApiVersion in appsettings.json (for example to v6) and restart. "
-                + "A VPN or a blocked network can also cause 403.";
+                       + "Change Jobsuche:ApiVersion in appsettings.json (for example to v6) and restart. "
+                       + "A VPN or a blocked network can also cause 403.";
         }
         else if (statusCode == HttpStatusCode.TooManyRequests)
         {

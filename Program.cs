@@ -25,7 +25,7 @@ builder.Services.Configure<JobsucheSettings>(
 // Our own services.
 builder.Services.AddSingleton(new HttpClient { Timeout = TimeSpan.FromSeconds(30) });
 builder.Services.AddSingleton<JobResponseParser>();
-builder.Services.AddSingleton<JobsucheClient>();
+builder.Services.AddSingleton<JobSearchClient>();
 
 // MCP server: talks over stdin/stdout, finds every [McpServerTool] in this project.
 builder.Services
@@ -36,10 +36,11 @@ builder.Services
 await builder.Build().RunAsync();
 
 
-async Task Test(string title, string area, int radiusKm = 25, int maxResult = 3)
+//Note Change RunAsync to Start Async if you need to manuel debug stuff. otherwise the execution not going further to the next line.
+async Task DebugHelper(string title, string area, int radiusKm = 25, int maxResult = 3)
 {
     var app = builder.Build();
-    var client = app.Services.GetRequiredService<JobsucheClient>();
+    var client = app.Services.GetRequiredService<JobSearchClient>();
     var result = await client.SearchAsync(title, area, radiusKm, maxResult);
     Console.WriteLine(JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
     await app.RunAsync();
