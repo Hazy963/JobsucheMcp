@@ -44,12 +44,7 @@ JobsucheMcp uses the open Model Context Protocol (MCP), allowing different AI cl
 - Select MCP Server
 - <img width="702" height="602" alt="image" src="https://github.com/user-attachments/assets/0d11def1-45a5-4349-8246-63a11ec08f8f" />
 - call your mcp server as you named it in your configuration with "/<McpName>":
-- <img width="1682" height="519" alt="image" src="https://github.com/user-attachments/assets/983a699c-ce8d-423d-bdc0-965219e10183" />
-
-
-
-
-
+- <img width="846" height="630" alt="image" src="https://github.com/user-attachments/assets/757d0d9a-41e0-4ca1-8834-4fbfd79a497b" />
 
 ## Available MCP Tools
 
