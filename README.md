@@ -33,10 +33,10 @@ JobsucheMcp uses the open Model Context Protocol (MCP), allowing different AI cl
 - **Local execution:** Runs on your own computer using .NET.
 - **Version information:** Check the application and API versions.
 
-## Integration with Github Copilot 
+## Getting Started
 - Build your Release ```dotnet publish -c Release -o C:\Tools\JobsucheMcp``` Folder
-- or donwnload prebuilt one form releases :
-- https://github.com/Hazy963/JobsucheMcp/releases/tag/v1.0
+- or dwonload prebuilt one frm releases:
+- https://github.com/Hazy963o/JobsucheMcp/releases/tag/v1.0
 - Extract the ZIP file to a folder of your choice.
 - Point your MCP client to JobsucheMcp.exe:
 - Open GitHub Copilot and navigate to Customize.
@@ -47,7 +47,7 @@ JobsucheMcp uses the open Model Context Protocol (MCP), allowing different AI cl
 - <img width="846" height="630" alt="image" src="https://github.com/user-attachments/assets/757d0d9a-41e0-4ca1-8834-4fbfd79a497b" />
 
 
-
+## Full github copilot Integration + Result video demo 
 https://github.com/user-attachments/assets/bd545560-6457-4327-99ee-cacfb4e8c992
 
 
@@ -76,9 +76,8 @@ Ask your AI assistant:
 - Bundesagentur für Arbeit Job Search API
 - STDIO transport
 
-## Getting Started
 
-See the installation and configuration instructions below for your preferred MCP client.
+
 
 
 
