@@ -31,7 +31,7 @@ public class JobSearchTools
     }
 
     [McpServerTool(Name = "search_jobs")]
-    [Description("Search job offers in Germany (Bundesagentur für Arbeit) by job title and area, with a radius in km.")]
+    [Description("Searches job offers in Germany (Bundesagentur für Arbeit) by job title and area, optionally within a radius in km. Returns the matching jobs as JSON. Full job details (description, requirements, contact) are included only if enabled in the server configuration.")]
     public async Task<string> SearchJobs(
         [Description("Job title or keywords, for example 'C# Entwickler' or '.NET Software Developer'.")] string title,
         [Description("City or area, for example 'Ludwigsburg'.")] string area,
