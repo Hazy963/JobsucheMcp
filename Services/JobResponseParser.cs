@@ -1,5 +1,7 @@
-using System.Text.Json;
 using JobsucheMcp.Models;
+using System.Runtime;
+using System.Text;
+using System.Text.Json;
 
 namespace JobsucheMcp.Services;
 
@@ -35,7 +37,7 @@ public class JobResponseParser
         if (result.Jobs.Count == 0)
         {
             result.Message = "No jobs found or the answer could not be read. "
-                + "Try a broader title, a bigger radius, or set Jobsuche:ReturnRawJson to true to see the raw answer.";
+                             + "Try a broader title, a bigger radius, or set Jobsuche:ReturnRawJson to true to see the raw answer.";
         }
 
         return result;

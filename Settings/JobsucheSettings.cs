@@ -34,4 +34,10 @@ public class JobsucheSettings
     /// Useful to see the real field names if the API changes.
     /// </summary>
     public bool ReturnRawJson { get; set; } = false;
+
+
+    /// <summary>
+    /// When true, the tool will fetch every job detail of founded jobs.
+    /// </summary>
+    public bool GetJobDetails { get; set; } = true;
 }

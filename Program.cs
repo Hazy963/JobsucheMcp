@@ -16,6 +16,7 @@ HostApplicationBuilderSettings hostSettings = new HostApplicationBuilderSettings
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(hostSettings);
 
 // MCP uses stdout for messages, so all logs must go to stderr.
+
 builder.Logging.AddConsole(options => options.LogToStandardErrorThreshold = LogLevel.Trace);
 
 // Settings from appsettings.json (section "Jobsuche") and environment variables.
@@ -32,16 +33,18 @@ builder.Services
     .AddMcpServer()
     .WithStdioServerTransport()
     .WithToolsFromAssembly();
+var app = builder.Build();
+await app.RunAsync();
 
-await builder.Build().RunAsync();
+
 
 
 //Note Change RunAsync to Start Async if you need to manuel debug stuff. otherwise the execution not going further to the next line.
-async Task DebugHelper(string title, string area, int radiusKm = 25, int maxResult = 3)
+async Task DeubgHelper(string title, string area, int radiusKm = 25, int maxResult = 3)
 {
-    var app = builder.Build();
     var client = app.Services.GetRequiredService<JobSearchClient>();
     var result = await client.SearchAsync(title, area, radiusKm, maxResult);
     Console.WriteLine(JsonSerializer.Serialize(result, new JsonSerializerOptions { WriteIndented = true }));
-    await app.RunAsync();
 }
+
+

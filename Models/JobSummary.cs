@@ -11,6 +11,9 @@ public class JobSummary
 
     public string PublishedDate { get; set; } = "";
 
+    /// <summary> Job Details will be filled just if it was configured in settings before search .</summary>
+    public string JobDetails { get; set; } = "";
+
     /// <summary>Earliest start date of the job (if given).</summary>
     public string StartDate { get; set; } = "";
 
