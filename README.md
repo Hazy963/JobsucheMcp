@@ -51,9 +51,10 @@ dotnet publish -c Release -o C:\Tools\JobsucheMcp
 
 <img width="702" height="602" alt="Adding the MCP server in GitHub Copilot" src="https://github.com/user-attachments/assets/0d11def1-45a5-4349-8246-63a11ec08f8f" />
 
-4. Call the server in chat by the name you gave it, for example `/jobsucheMcp`:
+4. Call the MCP server in chat by the name you gave it, for example `/jobsucheMcp`:
 
-<img width="846" height="630" alt="Calling the MCP server in chat" src="https://github.com/user-attachments/assets/757d0d9a-41e0-4ca1-8834-4fbfd79a497b" />
+<img width="1115" height="1114" alt="image" src="https://github.com/user-attachments/assets/7bd99ce4-6f36-4ff5-beed-f909eb545378" />
+
 
 **Claude Desktop**
 
