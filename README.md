@@ -85,6 +85,33 @@ JobsucheMcp uses the open Model Context Protocol, but clients differ in how they
 
 C#, .NET 8+, Model Context Protocol, Bundesagentur für Arbeit Job Search API, STDIO transport.
 
+## `search_jobs` output
+
+The tool returns JSON with the matching jobs. Each job contains:
+
+| Field | Description | Always included |
+|---|---|---|
+| `ReferenceNumber` | Unique job ID from the Bundesagentur für Arbeit (refnr) | Yes |
+| `Title` | Job title | Yes |
+| `Employer` | Company name | Yes |
+| `Location` | City, postal code and region of the job | Yes |
+| `Profession` | Main profession category | Yes |
+| `PublishedDate` | Date the offer was published | Yes |
+| `StartDate` | Earliest start date, if given | Yes |
+| `JobDetails` | Full job data as raw JSON: description, tasks, requirements, contract type, working hours, contact and employer website | Only if `FetchJobDetails` is enabled |
+
+If the details setting is off, `JobDetails` is empty and no extra API requests are made.
+
+
+## `search_jobs` parameters
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `title` | string | Yes | Job title or keywords, e.g. `C# Entwickler` |
+| `area` | string | Yes | City or area, e.g. `Stuttgart` |
+| `radiusKm` | int | No | Search radius in km (default from settings) |
+| `maxResults` | int | No | Number of jobs to return (default and cap from settings) |
+
 ## Disclaimer
 
 This is an unofficial project and is not affiliated with the Bundesagentur für Arbeit. It uses their public job search API.
